@@ -1,0 +1,48 @@
+@use '../variables' as *;
+
+.footer  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    text-align: center;
+
+    &__container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__links {
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 2rem;
+            justify-content: center;
+
+            li a {
+                color: $secondary-color;
+                font-size: 2rem;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        &__links {
+            ul {
+                gap: 1rem;
+                align-items: center;
+
+                li a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

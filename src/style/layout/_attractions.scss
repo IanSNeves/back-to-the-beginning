@@ -1,0 +1,84 @@
+@use '../../style/variables' as *;
+
+.line-up {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #4e00c2;
+    background: -webkit-linear-gradient(180deg, rgba(78, 0, 194, 1) 0%, rgba(31, 0, 94, 1) 50%, rgba(29, 0, 71, 1) 100%);
+    background: -moz-linear-gradient(180deg, rgba(78, 0, 194, 1) 0%, rgba(31, 0, 94, 1) 50%, rgba(29, 0, 71, 1) 100%);
+    background: linear-gradient(180deg, rgba(78, 0, 194, 1) 0%, rgba(31, 0, 94, 1) 50%, rgba(29, 0, 71, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4E00C2", endColorstr="#1D0047", GradientType=0);
+    
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: $black;
+        font-weight: 800;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__attraction, &__attraction--reversed {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        padding: 2rem 10rem;
+        gap: 3rem;
+
+
+        img {
+            width: 270px;
+            height: auto;
+            border: solid 8px $black;
+        }
+
+
+    }
+
+    &__band-name {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: $secondary-color;
+    }
+
+    &__attraction--reversed {
+        flex-direction: row-reverse;
+    }
+
+    @media (max-width: 1200px) {
+        &__attraction,
+        &__attraction--reversed {
+            padding: 2rem 4rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        padding-top: 40px;
+
+        &__title {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        &__attraction,
+        &__attraction--reversed {
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            gap: 1.5rem;
+            text-align: center; 
+        }
+
+        &__band-name {
+            font-size: 2rem; 
+            margin-bottom: 1rem;
+        }
+
+    }
+}

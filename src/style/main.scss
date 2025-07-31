@@ -1,0 +1,19 @@
+@use "variables";
+@use "layout/hero";
+@use "layout/attractions";
+@use "layout/footer";
+
+@use "~aos/dist/aos.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: variables.$font-family;
+}
+
+body {
+    color: variables.$text-color;
+}
+
+
